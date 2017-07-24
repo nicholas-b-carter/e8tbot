@@ -24,7 +24,7 @@
     "gulp-babel": "^6.1.2",
     "mongodb": "^2.2.11",
     "request": "^2.79.0",
-    "restify": "^4.2.0"
+    "restify": "^5.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
