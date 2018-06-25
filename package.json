@@ -11,7 +11,9 @@
     "cover": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./test --compilers js:babel-register",
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha ./test --compilers js:babel-register --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "start": "node ./dist/app.js",
-    "postinstall": "gulp --gulpfile gulpfile-heroku.js"
+    "postinstall": "gulp --gulpfile gulpfile-heroku.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "lyzs90",
   "license": "MIT",
@@ -24,7 +26,8 @@
     "gulp-babel": "^6.1.2",
     "mongodb": "^2.2.11",
     "request": "^2.79.0",
-    "restify": "^4.2.0"
+    "restify": "^4.2.0",
+    "snyk": "^1.83.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
@@ -36,5 +39,6 @@
     "nodemon": "^1.11.0",
     "seedrandom": "^2.4.2",
     "sinon": "^1.17.6"
-  }
+  },
+  "snyk": true
 }
